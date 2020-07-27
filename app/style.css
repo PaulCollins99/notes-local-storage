@@ -34,3 +34,14 @@ header {
     padding-right: 8px;
     text-align: right;
 }
+
+#noteHolder {
+    text-align: center;
+}
+
+#note {
+    text-align: center;
+    border: 1px solid black;
+    margin-bottom: 0.5em;
+    padding: 0.25;
+}

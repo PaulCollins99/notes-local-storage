@@ -1,5 +1,7 @@
 'use strict';
 
+//######################################## Service Worker ########################################\\
+
 if (navigator.serviceWorker) {
     async function registerServiceWorker() {
         try {
@@ -11,23 +13,18 @@ if (navigator.serviceWorker) {
     window.addEventListener('load', registerServiceWorker);
 }
 
-//document.querySelectorAll('[data-toggle-navbar]').forEach(toggle => {
-//    toggle.addEventListener('click', e => {
-//      const navID = toggle.dataset.toggleNavbar;
-//      const navElement = navID ? document.getElementById(navID) : undefined;
-//      console.log(navElement)
-//      if (navElement) {
-//         let navState = navElement.getAttribute('aria-hidden');
-//         navElement.setAttribute('aria-hidden', navState == 'true' ? false : true); 
-//      }
-//    });
-// });
+//######################################## Nav ########################################\\
 
 function toggle () {
     const navElement = document.getElementById("navbar")
     let navState = navElement.getAttribute('aria-hidden');
     navElement.setAttribute('aria-hidden', navState == 'true' ? false : true); 
 }
+
+//######################################## Note Creation Script ########################################\\
+
+
+//######################################## Boot ########################################\\
 
 function boot () {
     window.openNav.addEventListener('click', toggle);
