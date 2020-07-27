@@ -1,0 +1,18 @@
+{
+    "name": "Notes",
+    "short_name": "NoteApp",
+    "icons": [
+      {
+        "src": "./img/192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+    ],
+    "display": "standalone",
+    "start_url": "./index.html",
+    "background_color": "#FFF",
+    "scope": "./",
+    "theme_color": "#00a0ff",
+    "prefer_related_applications": false
+  }
+  
