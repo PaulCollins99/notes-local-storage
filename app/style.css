@@ -35,6 +35,9 @@ header {
     text-align: right;
 }
 
+.noteHolder {
+    margin-top: 8px;
+}
 
 .note {
     border: 1px solid black;
@@ -42,7 +45,16 @@ header {
     padding: 0.25;
 }
 
-.noteHeader, .noteText , .noteDetails{
+.noteHeader, .noteButton {
+    display: inline-block;
+}
+
+.noteHeader {
+    width: 80%;
     margin: 10px;
-    width: 65%;
+}
+
+.noteText , .noteDetails{
+    margin: 10px;
+    width: 95%;
 }
