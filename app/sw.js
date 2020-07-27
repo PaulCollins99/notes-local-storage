@@ -5,7 +5,7 @@ const cacheable = [
     './sw.js',
     './script.js',
     './manifest.json',
-    './img/192.png',
+    './multimedia/192.png',
     './style.css',
 ];
 
