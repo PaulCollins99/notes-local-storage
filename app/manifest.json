@@ -3,7 +3,7 @@
     "short_name": "NoteApp",
     "icons": [
       {
-        "src": "./img/192.png",
+        "src": "./multimedia/192.png",
         "type": "image/png",
         "sizes": "192x192"
       }
