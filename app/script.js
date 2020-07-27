@@ -21,14 +21,18 @@ function toggle () {
     navElement.setAttribute('aria-hidden', navState == 'true' ? false : true); 
 }
 
-//######################################## Note Creation Script ########################################\\
+//######################################## Note Script ########################################\\
 
+function test () {
+    alert("this is a note");
+}
 
 //######################################## Boot ########################################\\
 
 function boot () {
     window.openNav.addEventListener('click', toggle);
     window.closeNav.addEventListener('click', toggle);
+    window.note1.addEventListener('click', test)
 }
 
 document.addEventListener('load', boot);

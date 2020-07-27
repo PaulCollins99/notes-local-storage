@@ -35,13 +35,14 @@ header {
     text-align: right;
 }
 
-#noteHolder {
-    text-align: center;
-}
 
-#note {
-    text-align: center;
+.note {
     border: 1px solid black;
     margin-bottom: 0.5em;
     padding: 0.25;
+}
+
+.noteHeader, .noteText , .noteDetails{
+    margin: 10px;
+    width: 65%;
 }
