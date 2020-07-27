@@ -15,11 +15,16 @@
 
 </head>
 <body>
-    <section id="notesHolder">
-        <section id="note">
-            <p id="header">This is the header</p>
-            <p> This is the body</p>
-        </section>
+    <header id="header">
+        <button id="openNav" class="navButton" data-toggle-navbar="navbar" aria-label="Open Nav Bar" aria-hidden="true">Open Nav</button>
+    </header>
+    <section id="navbar" class="navbarHolder" aria-label="Main Nav" aria-hidden="true">
+        <nav class="navbarContent">
+            <button id="closeNav" class="navButton" data-toggle-navbar="navbar" aria-label="Close Nav Bar" aria-hidden="true">Close Nav</button>
+        </nav>
     </section>
+
+    <button data-toggle-navbar="navbar" aria-label="Open Nav Bar">Close Nav</button>
+
 </body>
 </html>

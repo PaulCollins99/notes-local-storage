@@ -1,3 +1,36 @@
-#section {
-    width: 100%
+body {
+    min-height: 100vh;
+    margin: 0px;
+}
+
+.navbarHolder {
+    background-color: #f1f1f1;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-width: 300px;
+}
+
+.navbarContent {
+    padding: 8px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.navbarHolder[aria-hidden="true"] {
+    transition: 200ms;
+    transform: translateX(100%);
+}
+
+.navbarHolder:not([aria-hidden]),
+.navbarHolder[aria-hidden="false"] {
+    transition: 200ms;
+    transform: translateX(0);
+}
+
+header {
+    padding-top: 8px;
+    padding-right: 8px;
+    text-align: right;
 }
