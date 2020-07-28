@@ -106,6 +106,15 @@ body {
     display: inline-block;
     width: 25%;
 }
+
+.noteSelect {
+    width: 15%;
+    border-radius: 25px;
+    border: 2px solid darkgrey;
+    font-size: larger;
+    background-color: rgb(239, 239, 239);
+}
+
 #currentUser {
     display: inline-block;
     margin-right: 50px;

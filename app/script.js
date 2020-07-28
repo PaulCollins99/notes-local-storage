@@ -39,9 +39,25 @@ function newNote (note) {
     header.className = "noteHeader"
     header.textContent = note.title
 
-    let button = document.createElement('button');
-    button.className = "noteButton"
-    button.textContent = "..."
+    let select = document.createElement('select');
+    select.className = "noteSelect"
+    select.textContent = "..."
+
+    let option = document.createElement('option');
+    option.value = ""
+    option.textContent = "..."
+
+    let option1 = document.createElement('option');
+    option1.value = "Edit"
+    option1.textContent = "Edit"
+
+    let option2 = document.createElement('option');
+    option2.value = "Delete"
+    option2.textContent = "Delete"
+
+    select.appendChild(option)
+    select.appendChild(option1)
+    select.appendChild(option2)
 
     let para = document.createElement('p');
     para.className = "noteText"
@@ -52,7 +68,7 @@ function newNote (note) {
     para2.textContent = note.creationDate
 
     section2.appendChild(header)
-    section2.appendChild(button)
+    section2.appendChild(select)
     section2.appendChild(para)
     section2.appendChild(para2)
     section.appendChild(section2)
