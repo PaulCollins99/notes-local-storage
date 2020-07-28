@@ -41,8 +41,6 @@ function boot () {
     window.note1Button.addEventListener('click', test)
     window.quitButton.addEventListener('click', quit)
 
-    let note = new Note("Test")
-    alert(note.title)
 }
 
 document.addEventListener('load', boot);
