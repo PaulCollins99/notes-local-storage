@@ -4,6 +4,7 @@ const cacheable = [
     './index.html',
     './sw.js',
     './script.js',
+    './notes.js',
     './manifest.json',
     './multimedia/192.png',
     './style.css',

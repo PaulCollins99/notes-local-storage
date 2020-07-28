@@ -1,5 +1,5 @@
 * {
-    font-family: arial, helvetica;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -52,6 +52,7 @@ body {
 
 .noteHolder {
     margin: 8px;
+    text-align: center;
 }
 
 .note {
@@ -72,7 +73,6 @@ body {
 
 .noteButton {
     width: 15%;
-    border: none;
     border-radius: 25px;
     border: 2px solid darkgrey;
     font-size: larger;
@@ -135,13 +135,28 @@ body {
 
 #quitButton { 
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 5px;
+    left: 5px;
 }
 
 #settingsButton {
     position: absolute;
-    bottom: 0;
-    left: 85px;
+    bottom: 5px;
+    left: 90px;
 
+}
+
+.newNoteButton {
+    border-radius: 50%;
+    border: 2px solid darkgrey;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    font-size: larger;
+    padding-left: 1px;
+}
+
+.openNavButton {
+    border: none;
+    background-color: rgb(194, 254, 242);
 }

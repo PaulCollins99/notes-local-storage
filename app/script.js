@@ -1,5 +1,7 @@
 'use strict';
 
+import {Note} from './notes.js'
+
 //######################################## Service Worker ########################################\\
 
 if (navigator.serviceWorker) {
@@ -36,8 +38,11 @@ function quit () {
 function boot () {
     window.openNav.addEventListener('click', toggle);
     window.closeNav.addEventListener('click', toggle);
-    window.note1.addEventListener('click', test)
+    window.note1Button.addEventListener('click', test)
     window.quitButton.addEventListener('click', quit)
+
+    let note = new Note("Test")
+    alert(note.title)
 }
 
 document.addEventListener('load', boot);
