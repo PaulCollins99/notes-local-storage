@@ -60,8 +60,6 @@ body {
 .noteHolder {
     margin: 5px;
     text-align: center;
-    overflow-y: scroll;
-    height: 100%;
 }
 
 .note {
@@ -170,4 +168,10 @@ body {
 .openNavButton {
     border: none;
     background-color: rgb(194, 254, 242);
+}
+
+.wrapper {
+    text-align: center;
+    overflow-y: scroll;
+    height: 95%;
 }

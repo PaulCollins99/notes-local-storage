@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name=description content="A note taking app.">
-    <meta name="theme-color" content="#336699"/>
+    <meta name="theme-color" content="#336699" />
 
     <title>Notes</title>
 
@@ -15,14 +16,16 @@
     <link rel="stylesheet" href="./style.css">
 
 </head>
+
 <body>
     <header id="topBar">
-        <p id="currentUser">Paul : Notes</p><button id="openNav" class="openNavButton" aria-label="Open Nav Bar" aria-hidden="true">☰</button>
+        <p id="currentUser">Paul : Notes</p><button id="openNav" class="openNavButton" aria-label="Open Nav Bar"
+            aria-hidden="true">☰</button>
     </header>
     <section id="navbar" class="navbarHolder" aria-label="Main Nav" aria-hidden="true">
         <nav class="navbarContent">
             <header class="navHeader">
-                <button id="closeNav" class="navButton"aria-label="Close Nav Bar" aria-hidden="true">→</button>
+                <button id="closeNav" class="navButton" aria-label="Close Nav Bar" aria-hidden="true">→</button>
             </header>
             <main class="navMain">
                 Navigation stuff goes here
@@ -33,21 +36,26 @@
             </footer>
         </nav>
     </section>
-    <section class="noteHolder">
-        <section class="note" id="note1">
-            <section class="noteDetails">
-                <h4 class="noteHeader">This is a note header</h4><button class="noteButton" id="note1Button">...</button>
-                <p class="noteText">This is a note body blah blah blah blah ...</p>
-            </section>            
-        </section>
-        <section class="note" id="note2">
-            <section class="noteDetails">
-                <h4 class="noteHeader">This is a second note</h4><button class="noteButton">...</button>
-                <p class="noteText">This is a note body blah blah blah blah ...</p>
+    <section class="wrapper">
+        <section class="noteHolder" id="holder">
+            <section class="note" id="note1">
+                <section class="noteDetails">
+                    <h4 class="noteHeader">This is a note header</h4><button class="noteButton"
+                        id="note1Button">...</button>
+                    <p class="noteText">This is a note body blah blah blah blah ...</p>
+                </section>
+            </section>
+            <section class="note" id="note2">
+                <section class="noteDetails">
+                    <h4 class="noteHeader">This is a second note</h4><button class="noteButton">...</button>
+                    <p class="noteText">This is a note body blah blah blah blah ...</p>
+                </section>
             </section>
         </section>
-        <button class="newNoteButton">＋</button>            
+
+        <button class="newNoteButton" id="addNote">＋</button>
     </section>
 
 </body>
+
 </html>
