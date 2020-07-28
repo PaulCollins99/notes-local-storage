@@ -79,6 +79,15 @@ function boot () {
             newNote(element);
         });
     }
+
+    window.testing.addEventListener("change", (event) => {
+        alert(event.target.value)
+        if (event.target.value == "Edit") {
+            window.location.href = "note.html"
+        } else {
+            alert("Deleted")
+        }
+    })
 }
 
 document.addEventListener('load', boot);

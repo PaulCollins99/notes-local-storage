@@ -21,7 +21,13 @@ function input () {
         summary = document.getElementById("full").value
     }
     const today = new Date();
-    let newNote = new Note(document.getElementById("title").value, summary, document.getElementById("full").value, today.getDate() + ":" + (today.getMonth() +1 ) + ":" + today.getFullYear() );
+    let month
+    if (today.getMonth() + 1 < 10) {
+        month = "0" + (today.getMonth() + 1)
+    } else {
+        month = today.getMonth() + 1
+    }
+    let newNote = new Note(document.getElementById("title").value, summary, document.getElementById("full").value, today.getDate() + ":" + month + ":" + today.getFullYear() );
     listOfNotes.push(newNote);
 
     localStorage.setItem("notes", JSON.stringify(listOfNotes))
@@ -33,7 +39,14 @@ function boot () {
     window.inputButton.addEventListener("click", input)
     const today = new Date();
     const options = {weekday : 'long'}
-    const date = new Intl.DateTimeFormat('en-US', options).format(today) + " " + today.getDate() + ":" + (today.getMonth() +1 ) + ":" + today.getFullYear() ;
+    let month;
+    if (today.getMonth() + 1 < 10) {
+        month = "0" + (today.getMonth() + 1)
+    } else {
+        month = today.getMonth() + 1
+    }
+    console.log(month);
+    const date = new Intl.DateTimeFormat('en-US', options).format(today) + " " + today.getDate() + ":" + month + ":" + today.getFullYear() ;
     document.getElementById("currentDate").textContent = date
 }
 
