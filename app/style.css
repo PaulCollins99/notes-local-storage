@@ -13,6 +13,15 @@ body {
 }
 
 .navbarContent {
+    display: grid;
+    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-areas: "topNav"
+                         "midNav"
+                         "botNav";
+
+    height: 100vh;
+
+
     padding: 8px;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -29,7 +38,7 @@ body {
     transform: translateX(0);
 }
 
-header {
+#topBar {
     padding-top: 8px;
     padding-right: 8px;
     text-align: right;
@@ -57,4 +66,33 @@ header {
 .noteText , .noteDetails{
     margin: 10px;
     width: 95%;
+}
+
+#currentUser {
+    display: inline-block;
+    margin-right: 50px;
+    margin-top: 0px;
+}
+
+#openNav {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.navHeader {
+    grid-area: topNav;
+}
+
+.navMain {
+    grid-area: midNav;
+}
+
+.navFooter {
+    grid-area: botNav;
+}
+
+.footerButton {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
 }

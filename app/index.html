@@ -15,19 +15,28 @@
 
 </head>
 <body>
-    <header id="header">
-        <button id="openNav" class="navButton"aria-label="Open Nav Bar" aria-hidden="true">Open Nav</button>
+    <header id="topBar">
+        <p id="currentUser">Current User : Paul</p><button id="openNav" class="navButton" aria-label="Open Nav Bar" aria-hidden="true">Open Nav</button>
     </header>
     <section id="navbar" class="navbarHolder" aria-label="Main Nav" aria-hidden="true">
         <nav class="navbarContent">
-            <button id="closeNav" class="navButton"aria-label="Close Nav Bar" aria-hidden="true">Close Nav</button>
+            <header class="navHeader">
+                <button id="closeNav" class="navButton"aria-label="Close Nav Bar" aria-hidden="true">Close Nav</button>
+            </header>
+            <main class="navMain">
+                This is the main content
+            </main>
+            <footer class="navFooter">
+                <button class="footerButton" id="quitButton">Quit</button>
+                <button class="footerButton">Settings</button>
+            </footer>
         </nav>
     </section>
     <section class="noteHolder">
         <section class="note" id="note1">
             <section class="noteDetails">
                 <h4 class="noteHeader">This is a note header</h4><button class="noteButton">Test</button>
-                <p class="noteText">This is a note body pleasssssseeeeeee</p>
+                <p class="noteText">This is a note body blah blah blah blah</p>
             </section>            
         </section>
     </section>

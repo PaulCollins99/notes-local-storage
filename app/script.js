@@ -29,10 +29,15 @@ function test () {
 
 //######################################## Boot ########################################\\
 
+function quit () {
+    window.close();
+}
+
 function boot () {
     window.openNav.addEventListener('click', toggle);
     window.closeNav.addEventListener('click', toggle);
     window.note1.addEventListener('click', test)
+    window.quitButton.addEventListener('click', quit)
 }
 
 document.addEventListener('load', boot);
