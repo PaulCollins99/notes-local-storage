@@ -119,6 +119,7 @@ body {
 
 .footerButton {
     border-radius: 25px;
+    border: 2px solid darkgrey;
     display: inline-block;
     width: 80px;
     height: 40px;
@@ -141,6 +142,6 @@ body {
 #settingsButton {
     position: absolute;
     bottom: 0;
-    left: 100px;
+    left: 85px;
 
 }
