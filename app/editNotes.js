@@ -45,7 +45,6 @@ function boot () {
     } else {
         month = today.getMonth() + 1
     }
-    console.log(month);
     const date = new Intl.DateTimeFormat('en-US', options).format(today) + " " + today.getDate() + ":" + month + ":" + today.getFullYear() ;
     document.getElementById("currentDate").textContent = date
 }
