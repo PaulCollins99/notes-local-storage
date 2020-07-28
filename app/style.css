@@ -93,6 +93,11 @@ body {
     display: inline-block;
     margin-right: 50px;
     margin-top: 0px;
+    margin-bottom: 8px;
+    padding-bottom: 1px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-bottom: 1px solid rgba(97, 97, 97, 1);
 }
 
 #openNav {
@@ -113,9 +118,11 @@ body {
 }
 
 .footerButton {
+    position: absolute;
     display: inline-block;
     width: 80px;
     height: 80px;
+    bottom: 0;
 }
 
 .navButton {
