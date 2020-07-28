@@ -47,9 +47,14 @@ function newNote (note) {
     para.className = "noteText"
     para.textContent = note.summary
 
+    let para2 = document.createElement('p');
+    para2.className = "noteDate"
+    para2.textContent = note.creationDate
+
     section2.appendChild(header)
     section2.appendChild(button)
     section2.appendChild(para)
+    section2.appendChild(para2)
     section.appendChild(section2)
     document.getElementById("holder").appendChild(section)
 }
