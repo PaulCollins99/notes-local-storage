@@ -15,6 +15,7 @@ body {
     top: 0;
     right: 0;
     min-width: 300px;
+    border-radius: 15px;
 }
 
 .navbarContent {
@@ -40,7 +41,7 @@ body {
 .navbarHolder:not([aria-hidden]),
 .navbarHolder[aria-hidden="false"] {
     transition: 200ms;
-    transform: translateX(0);
+    transform: translateX(10%);
 }
 
 #topBar {
