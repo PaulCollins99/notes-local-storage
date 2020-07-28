@@ -1,7 +1,5 @@
 'use strict';
 
-import {Note} from './notes.js'
-
 //######################################## Service Worker ########################################\\
 
 if (navigator.serviceWorker) {
@@ -25,11 +23,12 @@ function toggle () {
 
 //######################################## Note Script ########################################\\
 
-function test () {
-    alert("this is a note");
+function gotoNewNote () {
+    window.location.href = "note.html"
 }
 
-function newNote () {
+
+function newNote (note) {
     let section = document.createElement('section');
     section.className = "note"
 
@@ -38,7 +37,7 @@ function newNote () {
 
     let header = document.createElement('h4');
     header.className = "noteHeader"
-    header.textContent = "This is a note header"
+    header.textContent = note.title
 
     let button = document.createElement('button');
     button.className = "noteButton"
@@ -46,7 +45,7 @@ function newNote () {
 
     let para = document.createElement('p');
     para.className = "noteText"
-    para.textContent = "This is a note body blah blah blah blah ..."
+    para.textContent = note.summary
 
     section2.appendChild(header)
     section2.appendChild(button)
@@ -58,15 +57,23 @@ function newNote () {
 //######################################## Boot ########################################\\
 
 function quit () {
-    window.close();
+    localStorage.setItem("notes", JSON.stringify([]))
 }
 
 function boot () {
     window.openNav.addEventListener('click', toggle);
     window.closeNav.addEventListener('click', toggle);
-    window.note1Button.addEventListener('click', test)
     window.quitButton.addEventListener('click', quit)
-    window.addNote.addEventListener('click', newNote)
+    window.addNote.addEventListener('click', gotoNewNote)
+
+    if (localStorage.getItem("notes") == null) {
+        localStorage.setItem("notes", JSON.stringify([]))
+    } else {
+        let notesArray = JSON.parse(localStorage.getItem("notes"))
+        notesArray.forEach(element => {
+            newNote(element);
+        });
+    }
 }
 
 document.addEventListener('load', boot);

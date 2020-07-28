@@ -20,8 +20,9 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    min-width: 300px;
+    min-width: 240px;
     border-radius: 15px;
+    border-left: 1px solid rgb(76, 99, 94);
 }
 
 .navbarContent {
@@ -32,8 +33,6 @@ body {
         "botNav";
 
     height: 100vh;
-
-
     padding: 8px;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -98,6 +97,9 @@ body {
     width: 95%;
 }
 
+.noteDetails {
+    text-align: center;
+}
 #currentUser {
     display: inline-block;
     margin-right: 50px;
