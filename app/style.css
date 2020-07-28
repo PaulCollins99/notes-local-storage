@@ -118,11 +118,11 @@ body {
 }
 
 .footerButton {
-    position: absolute;
+    border-radius: 25px;
     display: inline-block;
     width: 80px;
-    height: 80px;
-    bottom: 0;
+    height: 40px;
+    
 }
 
 .navButton {
@@ -130,4 +130,17 @@ body {
     border-radius: 25px;
     border: 2px solid darkgrey;
     font-size: large;
+}
+
+#quitButton { 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#settingsButton {
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+
 }
