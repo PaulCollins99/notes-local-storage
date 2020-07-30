@@ -24,11 +24,12 @@ function toggle () {
 //######################################## Note Script ########################################\\
 
 function gotoNewNote () {
+    localStorage.setItem("load", "*new")
     window.location.href = "note.html"
 }
 
 
-function newNote (note) {
+function newNote (note, count) {
     let section = document.createElement('section');
     section.className = "note"
 
@@ -42,6 +43,8 @@ function newNote (note) {
     let button = document.createElement('button');
     button.className = "noteButton"
     button.textContent = "..."
+    button.id = count
+    button.addEventListener("click",editNote)
 
     let para = document.createElement('p');
     para.className = "noteText"
@@ -57,6 +60,12 @@ function newNote (note) {
     section2.appendChild(para2)
     section.appendChild(section2)
     document.getElementById("holder").appendChild(section)
+    localStorage.setItem("load", "*new")
+}
+
+function editNote (e) {
+    localStorage.setItem("load", e.target.id)
+    window.location.href = "note.html"
 }
 
 //######################################## Boot ########################################\\
@@ -71,12 +80,16 @@ function boot () {
     window.quitButton.addEventListener('click', quit)
     window.addNote.addEventListener('click', gotoNewNote)
 
+    let count = 0
+
+
     if (localStorage.getItem("notes") == null) {
         localStorage.setItem("notes", JSON.stringify([]))
     } else {
         let notesArray = JSON.parse(localStorage.getItem("notes"))
-        notesArray.forEach(element => {
-            newNote(element);
+        notesArray.forEach(note => {
+            newNote(note, count);
+            count ++;
         });
     }
 }

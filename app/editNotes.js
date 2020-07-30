@@ -28,7 +28,12 @@ function input () {
         month = today.getMonth() + 1
     }
     let newNote = new Note(document.getElementById("title").value, summary, document.getElementById("full").value, today.getDate() + ":" + month + ":" + today.getFullYear() );
-    listOfNotes.push(newNote);
+    if (localStorage.getItem("load") == "*new") {
+        listOfNotes.push(newNote);
+    } else {
+        listOfNotes[localStorage.getItem("load")] = newNote
+    }
+
 
     localStorage.setItem("notes", JSON.stringify(listOfNotes))
 
@@ -37,6 +42,16 @@ function input () {
 
 function boot () {
     window.inputButton.addEventListener("click", input)
+
+    const load = localStorage.getItem("load")
+
+    if (load == "*new") {
+
+    } else {
+        let notes = JSON.parse(localStorage.getItem("notes"))
+        document.getElementById("title").value = notes[load].title
+        document.getElementById("full").textContent = notes[load].full
+    }
     const today = new Date();
     const options = {weekday : 'long'}
     let month;
