@@ -40,9 +40,30 @@ function input () {
     window.location.href = "index.html"
 }
 
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const recorder = new SpeechRecognition();
+
+function start (e) {
+
+    recorder.start();
+}
+
+function run() {
+    recorder.onstart = () => {
+        console.log('Voice activated');
+    };
+
+    recorder.onresult = (event) => {
+        const resultIndex = event.resultIndex;
+        const transcript = event.results[resultIndex][0].transcript;
+        document.getElementById("full").textContent += transcript
+    };
+}
+
+
 function boot () {
     window.inputButton.addEventListener("click", input)
-
+    window.full.addEventListener("click", start)
     const load = localStorage.getItem("load")
 
     if (load == "*new") {
@@ -62,6 +83,7 @@ function boot () {
     }
     const date = new Intl.DateTimeFormat('en-US', options).format(today) + " " + today.getDate() + ":" + month + ":" + today.getFullYear() ;
     document.getElementById("currentDate").textContent = date
+    run();
 }
 
 window.addEventListener("load", boot)
