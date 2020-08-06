@@ -9,6 +9,7 @@ const cacheable = [
     './note.html',
     './manifest.json',
     './multimedia/192.png',
+    './multimedia/wave.svg',
     './style.css',
 ];
 
