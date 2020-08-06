@@ -83,8 +83,16 @@ function boot () {
     }
     const date = new Intl.DateTimeFormat('en-US', options).format(today) + " " + today.getDate() + ":" + month + ":" + today.getFullYear() ;
     document.getElementById("currentDate").textContent = date
+ 
     run();
 }
+
+setTimeout(function () {
+    let viewheight = $(window).height();
+    let viewwidth = $(window).width();
+    let viewport = document.querySelector("meta[name=viewport]");
+    viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth + "px, initial-scale=1.0");
+}, 300);
 
 window.addEventListener("load", boot)
 boot()
