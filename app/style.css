@@ -1,5 +1,5 @@
 * {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Segoe', Helvetica, Arial, sans-serif;
 }
 
 html {
@@ -10,7 +10,7 @@ body {
     min-height: 100vh;
     margin: 0px;
     background: rgb(93,153,214);
-    background: linear-gradient(0deg, rgba(93,153,214,1) 0%, rgba(110,158,207,1) 50%, rgba(171,201,231,1) 100%);
+    background: linear-gradient(340deg, rgba(93,153,214,1) 0%, rgba(110,158,207,1) 50%, rgba(171,201,231,1) 100%);
     overflow: hidden;
     height: 100%;
 }
@@ -129,6 +129,7 @@ body {
     padding-right: 4px;
     border-bottom: 1px solid rgba(97, 97, 97, 1);
     background-color: transparent;
+    font-size: larger;
 }
 
 #openNav {
@@ -190,7 +191,7 @@ body {
 
 .openNavButton {
     border: none;
-    background-color: rgb(171, 201, 231);
+    background-color: transparent;
 }
 
 .wrapper {
