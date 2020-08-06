@@ -60,10 +60,17 @@ function run() {
     };
 }
 
+function toggle () {
+    const navElement = document.getElementById("navbar")
+    let navState = navElement.getAttribute('aria-hidden');
+    navElement.setAttribute('aria-hidden', navState == 'true' ? false : true); 
+}
 
 function boot () {
     window.inputButton.addEventListener("click", input)
     window.enableMic.addEventListener("click", start)
+    window.openNav.addEventListener('click', toggle);
+    window.closeNav.addEventListener('click', toggle);
     const load = localStorage.getItem("load")
 
     if (load == "*new") {
@@ -92,7 +99,8 @@ setTimeout(function () {
     let viewwidth = window.outerWidth
     let viewport = document.querySelector("meta[name=viewport]");
     viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth + "px, initial-scale=1.0");
-}, 300);
+}, 150);
 
 window.addEventListener("load", boot)
+
 boot()
