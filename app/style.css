@@ -235,4 +235,11 @@ body {
 
 .newNoteDate {
     margin-bottom: 10px;
+    display: inline-block;
+}
+
+.newNoteMic {
+    display: inline-block;    
+    border-radius: 25px;
+    border: 2px solid darkgrey;
 }

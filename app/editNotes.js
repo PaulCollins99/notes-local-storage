@@ -63,7 +63,7 @@ function run() {
 
 function boot () {
     window.inputButton.addEventListener("click", input)
-    window.full.addEventListener("click", start)
+    window.enableMic.addEventListener("click", start)
     const load = localStorage.getItem("load")
 
     if (load == "*new") {
