@@ -21,7 +21,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    min-width: 240px;
+    min-width: 216px;
     border-radius: 15px;
     border-left: 1px solid darkgray;
 }
@@ -48,7 +48,7 @@ body {
 .navbarHolder:not([aria-hidden]),
 .navbarHolder[aria-hidden="false"] {
     transition: 200ms;
-    transform: translateX(10%);
+    transform: translateX(0%);
 }
 
 #topBar {
@@ -121,9 +121,7 @@ body {
 
 #currentUser {
     display: inline-block;
-    margin-right: 50px;
-    margin-top: 0px;
-    margin-bottom: 8px;
+    margin: auto;
     padding-bottom: 1px;
     padding-left: 4px;
     padding-right: 4px;
@@ -134,10 +132,12 @@ body {
 
 #openNav {
     display: inline-block;
-    margin-left: 50px;
+
 }
 
 .navHeader {
+    
+    text-align: right;
     grid-area: topNav;
 }
 
